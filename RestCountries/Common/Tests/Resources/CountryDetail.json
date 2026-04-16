@@ -1,0 +1,28 @@
+{
+    "name": {
+        "common": "Colombia",
+        "official": "Republic of Colombia"
+    },
+    "cca2": "CO",
+    "flags": {
+        "png": "https://flagcdn.com/w320/co.png",
+        "svg": "https://flagcdn.com/co.svg",
+        "alt": "The flag of Colombia is composed of three horizontal bands of yellow, blue and red, with the yellow band twice the height of the other two bands."
+    },
+    "region": "Americas",
+    "capital": ["Bogotá"],
+    "population": 53057212,
+    "area": 1141748.0,
+    "languages": {
+        "spa": "Spanish"
+    },
+    "currencies": {
+        "COP": {
+            "name": "Colombian peso",
+            "symbol": "$"
+        }
+    },
+    "borders": ["BRA", "ECU", "PAN", "PER", "VEN"],
+    "timezones": ["UTC-05:00"],
+    "continents": ["South America"]
+}
