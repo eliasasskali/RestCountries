@@ -1,0 +1,15 @@
+[
+    {
+        "name": {
+            "common": "Spain",
+            "official": "Kingdom of Spain"
+        },
+        "cca2": "ES",
+        "flags": {
+            "png": "https://flagcdn.com/w320/es.png",
+            "svg": "https://flagcdn.com/es.svg",
+            "alt": "The flag of Spain is composed of two equal horizontal bands of red and a wider central band of yellow."
+        },
+        "region": "Europe"
+    }
+]

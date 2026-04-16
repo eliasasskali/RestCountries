@@ -29,20 +29,49 @@
 		9CB5A2082F8E8AD800782724 /* RestCountriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestCountriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9C60F71E2F913D5D00234CF4 /* Exceptions for "RestCountries" folder in "RestCountries" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Tests/Helpers/JSONLoader.swift,
+				Common/Tests/Helpers/NetworkServiceMock.swift,
+				Common/Tests/Resources/Countries.json,
+				Features/CountryList/Tests/Data/DTOs/CountryDTOTests.swift,
+				"Features/CountryList/Tests/Data/Mocks/CountryDTO+Mock.swift",
+				"Features/CountryList/Tests/Data/Mocks/CountryFlagsDTO+Mock.swift",
+				"Features/CountryList/Tests/Data/Mocks/CountryNameDTO+Mock.swift",
+				Features/CountryList/Tests/Infraestructure/DataSources/CountriesDataSourceDefaultTests.swift,
+				Features/CountryList/Tests/Infraestructure/DataSources/Mocks/CountriesDataSourceMock.swift,
+				Features/CountryList/Tests/Infraestructure/Endpoints/CountriesEndpointTests.swift,
+			);
+			target = 9CB5A1F02F8E8AD700782724 /* RestCountries */;
+		};
+		9C60F71F2F913D5D00234CF4 /* Exceptions for "RestCountries" folder in "RestCountriesTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Tests/Helpers/JSONLoader.swift,
+				Common/Tests/Helpers/NetworkServiceMock.swift,
+				Common/Tests/Resources/Countries.json,
+				Features/CountryList/Tests/Data/DTOs/CountryDTOTests.swift,
+				"Features/CountryList/Tests/Data/Mocks/CountryDTO+Mock.swift",
+				"Features/CountryList/Tests/Data/Mocks/CountryFlagsDTO+Mock.swift",
+				"Features/CountryList/Tests/Data/Mocks/CountryNameDTO+Mock.swift",
+				Features/CountryList/Tests/Infraestructure/DataSources/CountriesDataSourceDefaultTests.swift,
+				Features/CountryList/Tests/Infraestructure/DataSources/Mocks/CountriesDataSourceMock.swift,
+				Features/CountryList/Tests/Infraestructure/Endpoints/CountriesEndpointTests.swift,
+			);
+			target = 9CB5A1FD2F8E8AD800782724 /* RestCountriesTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9CB5A1F32F8E8AD700782724 /* RestCountries */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9C60F71E2F913D5D00234CF4 /* Exceptions for "RestCountries" folder in "RestCountries" target */,
+				9C60F71F2F913D5D00234CF4 /* Exceptions for "RestCountries" folder in "RestCountriesTests" target */,
+			);
 			path = RestCountries;
-			sourceTree = "<group>";
-		};
-		9CB5A2012F8E8AD800782724 /* RestCountriesTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RestCountriesTests;
-			sourceTree = "<group>";
-		};
-		9CB5A20B2F8E8AD800782724 /* RestCountriesUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RestCountriesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				9CB5A1F32F8E8AD700782724 /* RestCountries */,
-				9CB5A2012F8E8AD800782724 /* RestCountriesTests */,
-				9CB5A20B2F8E8AD800782724 /* RestCountriesUITests */,
 				9CB5A1F22F8E8AD700782724 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +157,6 @@
 			dependencies = (
 				9CB5A2002F8E8AD800782724 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				9CB5A2012F8E8AD800782724 /* RestCountriesTests */,
-			);
 			name = RestCountriesTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +176,6 @@
 			);
 			dependencies = (
 				9CB5A20A2F8E8AD800782724 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				9CB5A20B2F8E8AD800782724 /* RestCountriesUITests */,
 			);
 			name = RestCountriesUITests;
 			packageProductDependencies = (
@@ -405,6 +426,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +459,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
