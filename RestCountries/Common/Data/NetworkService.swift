@@ -16,6 +16,8 @@ protocol NetworkService: Sendable {
 // MARK: - NetworkServiceDefault
 
 final class NetworkServiceDefault: NetworkService {
+    nonisolated init() {}
+
     nonisolated func request<T: Decodable>(endpoint: Endpoint) async throws -> T {
         let urlRequest = try endpoint.asURLRequest()
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
