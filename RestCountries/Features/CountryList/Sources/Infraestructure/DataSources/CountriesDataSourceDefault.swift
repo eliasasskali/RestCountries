@@ -17,7 +17,7 @@ final class CountriesDataSourceDefault: CountriesDataSource {
     // MARK: - Initializer
 
     nonisolated init(
-        networkService: NetworkService,
+        networkService: NetworkService = NetworkServiceDefault(),
         endpoint: Endpoint = CountriesEndpoint()
     ) {
         self.networkService = networkService

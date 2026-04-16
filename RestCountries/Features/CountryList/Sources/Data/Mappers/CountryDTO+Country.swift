@@ -11,7 +11,7 @@ extension CountryDTO {
     func toDomain() -> Country? {
         guard let cca2,
               let name = name?.common ?? name?.official,
-              let flagUrlString = flags?.svg ?? flags?.png,
+              let flagUrlString = flags?.png,
               let flagURL = URL(string: flagUrlString)
         else { return nil }
         return Country(

@@ -48,6 +48,7 @@
 				Features/CountryList/Tests/Infraestructure/Endpoints/CountriesEndpointTests.swift,
 				Features/CountryList/Tests/Infraestructure/Repositories/CountriesRepositoryDefaultTests.swift,
 				Features/CountryList/Tests/Infraestructure/Repositories/Mocks/CountriesRepositoryMock.swift,
+				Features/CountryList/Tests/Presentation/ViewModels/CountryListViewModelTests.swift,
 			);
 			target = 9CB5A1F02F8E8AD700782724 /* RestCountries */;
 		};
@@ -69,6 +70,7 @@
 				Features/CountryList/Tests/Infraestructure/Endpoints/CountriesEndpointTests.swift,
 				Features/CountryList/Tests/Infraestructure/Repositories/CountriesRepositoryDefaultTests.swift,
 				Features/CountryList/Tests/Infraestructure/Repositories/Mocks/CountriesRepositoryMock.swift,
+				Features/CountryList/Tests/Presentation/ViewModels/CountryListViewModelTests.swift,
 			);
 			target = 9CB5A1FD2F8E8AD800782724 /* RestCountriesTests */;
 		};
