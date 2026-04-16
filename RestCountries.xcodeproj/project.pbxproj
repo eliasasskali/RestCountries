@@ -37,12 +37,17 @@
 				Common/Tests/Helpers/NetworkServiceMock.swift,
 				Common/Tests/Resources/Countries.json,
 				Features/CountryList/Tests/Data/DTOs/CountryDTOTests.swift,
+				Features/CountryList/Tests/Data/Mappers/CountryDTOMapperTests.swift,
 				"Features/CountryList/Tests/Data/Mocks/CountryDTO+Mock.swift",
 				"Features/CountryList/Tests/Data/Mocks/CountryFlagsDTO+Mock.swift",
 				"Features/CountryList/Tests/Data/Mocks/CountryNameDTO+Mock.swift",
+				"Features/CountryList/Tests/Domain/Mocks/Country+Mock.swift",
+				"Features/CountryList/Tests/Domain/Mocks/CountryFlag+Mock.swift",
 				Features/CountryList/Tests/Infraestructure/DataSources/CountriesDataSourceDefaultTests.swift,
 				Features/CountryList/Tests/Infraestructure/DataSources/Mocks/CountriesDataSourceMock.swift,
 				Features/CountryList/Tests/Infraestructure/Endpoints/CountriesEndpointTests.swift,
+				Features/CountryList/Tests/Infraestructure/Repositories/CountriesRepositoryDefaultTests.swift,
+				Features/CountryList/Tests/Infraestructure/Repositories/Mocks/CountriesRepositoryMock.swift,
 			);
 			target = 9CB5A1F02F8E8AD700782724 /* RestCountries */;
 		};
@@ -53,12 +58,17 @@
 				Common/Tests/Helpers/NetworkServiceMock.swift,
 				Common/Tests/Resources/Countries.json,
 				Features/CountryList/Tests/Data/DTOs/CountryDTOTests.swift,
+				Features/CountryList/Tests/Data/Mappers/CountryDTOMapperTests.swift,
 				"Features/CountryList/Tests/Data/Mocks/CountryDTO+Mock.swift",
 				"Features/CountryList/Tests/Data/Mocks/CountryFlagsDTO+Mock.swift",
 				"Features/CountryList/Tests/Data/Mocks/CountryNameDTO+Mock.swift",
+				"Features/CountryList/Tests/Domain/Mocks/Country+Mock.swift",
+				"Features/CountryList/Tests/Domain/Mocks/CountryFlag+Mock.swift",
 				Features/CountryList/Tests/Infraestructure/DataSources/CountriesDataSourceDefaultTests.swift,
 				Features/CountryList/Tests/Infraestructure/DataSources/Mocks/CountriesDataSourceMock.swift,
 				Features/CountryList/Tests/Infraestructure/Endpoints/CountriesEndpointTests.swift,
+				Features/CountryList/Tests/Infraestructure/Repositories/CountriesRepositoryDefaultTests.swift,
+				Features/CountryList/Tests/Infraestructure/Repositories/Mocks/CountriesRepositoryMock.swift,
 			);
 			target = 9CB5A1FD2F8E8AD800782724 /* RestCountriesTests */;
 		};
