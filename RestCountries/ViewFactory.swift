@@ -16,4 +16,11 @@ enum ViewFactory {
         let viewModel = CountryListViewModel(repository: repository)
         return CountriesListView(viewModel: viewModel)
     }
+
+    static func makeCountryDetailView(countryCode: String) -> CountryDetailView {
+        let dataSource = CountryDetailDataSourceDefault()
+        let repository = CountryDetailRepositoryDefault(dataSource: dataSource)
+        let viewModel = CountryDetailViewModel(repository: repository, countryCode: countryCode)
+        return CountryDetailView(viewModel: viewModel)
+    }
 }

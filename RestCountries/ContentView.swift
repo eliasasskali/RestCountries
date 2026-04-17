@@ -12,6 +12,9 @@ struct ContentView: View {
         NavigationStack {
             ViewFactory.makeCountriesListView()
                 .navigationTitle("Countries")
+                .navigationDestination(for: Country.self) { country in
+                    ViewFactory.makeCountryDetailView(countryCode: country.cca2)
+                }
         }
     }
 }

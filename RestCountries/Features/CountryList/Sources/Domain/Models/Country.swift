@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country: Equatable, Sendable, Identifiable {
+struct Country: Equatable, Hashable, Sendable, Identifiable {
     let name: String
     let flag: CountryFlag
     let cca2: String

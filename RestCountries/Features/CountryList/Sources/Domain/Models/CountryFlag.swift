@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryFlag: Equatable, Sendable {
+struct CountryFlag: Equatable, Hashable, Sendable {
     let url: URL
     let alt: String?
 }

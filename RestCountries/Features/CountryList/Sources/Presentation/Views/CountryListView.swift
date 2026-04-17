@@ -45,7 +45,9 @@ struct CountriesListView: View {
 private extension CountriesListView {
     var countryList: some View {
         List(viewModel.filteredCountries) { country in
-            CountryListItemView(country: country)
+            NavigationLink(value: country) {
+                CountryListItemView(country: country)
+            }
         }
         .listStyle(.plain)
         .refreshable {
