@@ -1,3 +1,4 @@
+import Localization
 import SwiftUI
 
 struct CountryDetailView: View {
@@ -22,7 +23,7 @@ struct CountryDetailView: View {
             } else if let detail = viewModel.countryDetail {
                 content(for: detail)
             } else {
-                NoContentView(message: "Country details not available")
+                NoContentView(message: Localizables.CountryDetail.notAvailableMessage)
             }
         }
         .navigationTitle(viewModel.countryDetail?.name ?? "")
@@ -56,7 +57,7 @@ private extension CountryDetailView {
                     .frame(maxHeight: 200)
                     .cornerRadius(8)
                     .shadow(radius: 4)
-                    .accessibilityLabel(detail.flag.alt ?? "Flag of \(detail.name)")
+                    .accessibilityLabel(detail.flag.alt ?? Localizables.AccessibilityLabels.countryFlagImage(flag: detail.name))
             } placeholder: {
                 Rectangle()
                     .fill(Color.gray.opacity(0.3))
@@ -76,42 +77,42 @@ private extension CountryDetailView {
         VStack(alignment: .leading, spacing: 16) {
             if let region = detail.region {
                 infoRow(
-                    title: "Region",
+                    title: Localizables.CountryDetail.region,
                     value: region
                 )
             }
 
             if !detail.continents.isEmpty {
                 infoRow(
-                    title: "Continent",
+                    title: Localizables.CountryDetail.continent,
                     value: detail.continents.joined(separator: ", ")
                 )
             }
 
             if !detail.capitals.isEmpty {
                 infoRow(
-                    title: detail.capitals.count > 1 ? "Capitals" : "Capital",
+                    title: detail.capitals.count > 1 ? Localizables.CountryDetail.capitals : Localizables.CountryDetail.capital,
                     value: detail.capitals.joined(separator: ", ")
                 )
             }
 
             if let population = detail.population {
                 infoRow(
-                    title: "Population",
+                    title: Localizables.CountryDetail.population,
                     value: population.formatted()
                 )
             }
 
             if let area = detail.area {
                 infoRow(
-                    title: "Area",
-                    value: "\(area.formatted()) km²"
+                    title: Localizables.CountryDetail.area,
+                    value: Localizables.CountryDetail.areaValue(area.formatted())
                 )
             }
 
             if !detail.languages.isEmpty {
                 infoRow(
-                    title: detail.languages.count > 1 ? "Languages" : "Language",
+                    title: detail.languages.count > 1 ? Localizables.CountryDetail.languages : Localizables.CountryDetail.language,
                     value: detail.languages.joined(separator: ", ")
                 )
             }
@@ -122,7 +123,7 @@ private extension CountryDetailView {
 
             if !detail.timezones.isEmpty {
                 infoRow(
-                    title: detail.timezones.count > 1 ? "Timezones" : "Timezone",
+                    title: detail.timezones.count > 1 ? Localizables.CountryDetail.timezones : Localizables.CountryDetail.timezone,
                     value: detail.timezones.joined(separator: ", ")
                 )
             }
@@ -146,7 +147,7 @@ private extension CountryDetailView {
 
     func currenciesRow(_ currencies: [Currency]) -> some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(currencies.count > 1 ? "Currencies" : "Currency")
+            Text(currencies.count > 1 ? Localizables.CountryDetail.currencies : Localizables.CountryDetail.currency)
                 .font(.caption)
                 .foregroundColor(.secondary)
             ForEach(currencies, id: \.code) { currency in

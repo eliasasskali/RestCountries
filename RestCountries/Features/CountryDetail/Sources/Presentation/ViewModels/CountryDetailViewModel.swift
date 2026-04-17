@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import Localization
 
 @MainActor
 final class CountryDetailViewModel: ObservableObject {
@@ -32,7 +33,7 @@ final class CountryDetailViewModel: ObservableObject {
         do {
             countryDetail = try await repository.fetchCountryDetail(code: countryCode)
         } catch {
-            errorMessage = "Failed to load country details"
+            errorMessage = Localizables.Errors.failedToLoadCountryDetails
         }
     }
 }

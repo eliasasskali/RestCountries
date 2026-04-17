@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import Localization
 
 @MainActor
 final class CountryListViewModel: ObservableObject {
@@ -52,7 +53,7 @@ final class CountryListViewModel: ObservableObject {
         do {
             countries = try await repository.fetchCountries()
         } catch {
-            errorMessage = "Failed to load countries"
+            errorMessage = Localizables.Errors.failedToLoadCountries
         }
     }
 }

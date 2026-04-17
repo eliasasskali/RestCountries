@@ -5,6 +5,7 @@
 //  Created by Elias Asskali Assakali on 16/04/2026.
 //
 
+import Localization
 import SwiftUI
 
 struct CountriesListView: View {
@@ -27,12 +28,12 @@ struct CountriesListView: View {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else if viewModel.filteredCountries.isEmpty {
-                NoContentView(message: isSearching ? "No countries found" : "No countries available")
+                NoContentView(message: isSearching ? Localizables.CountryList.noCountriesFound : Localizables.CountryList.noCountriesAvailable)
             } else {
                 countryList
             }
         }
-        .searchable(text: $viewModel.searchText, prompt: "Search countries")
+        .searchable(text: $viewModel.searchText, prompt: Localizables.CountryList.searchPrompt)
         .task {
             await viewModel.fetchCountries()
         }

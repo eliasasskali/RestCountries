@@ -5,6 +5,7 @@
 //  Created by Elias Asskali Assakali on 16/04/2026.
 //
 
+import Localization
 import SwiftUI
 
 struct CountryListItemView: View {
@@ -34,7 +35,7 @@ private extension CountryListItemView {
                 .scaledToFit()
                 .frame(width: 50, height: 30)
                 .cornerRadius(4)
-                .accessibilityLabel(country.flag.alt ?? "Flag of \(country.name)")
+                .accessibilityLabel(country.flag.alt ?? Localizables.AccessibilityLabels.countryFlagImage(flag: country.name))
         } placeholder: {
             Rectangle()
                 .fill(Color.gray.opacity(0.3))

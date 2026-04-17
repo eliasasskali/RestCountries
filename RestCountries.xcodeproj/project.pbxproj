@@ -181,6 +181,7 @@
 			);
 			name = RestCountries;
 			packageProductDependencies = (
+				9CB5A2302F8E900000782724 /* Localization */,
 			);
 			productName = RestCountries;
 			productReference = 9CB5A1F12F8E8AD700782724 /* RestCountries.app */;
@@ -260,6 +261,9 @@
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9CB5A1F22F8E8AD700782724 /* Products */;
+			packageReferences = (
+				9CB5A22F2F8E900000782724 /* XCLocalSwiftPackageReference "RestCountries/Common/Localization" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -643,6 +647,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		9CB5A22F2F8E900000782724 /* XCLocalSwiftPackageReference "RestCountries/Common/Localization" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RestCountries/Common/Localization;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CB5A2302F8E900000782724 /* Localization */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Localization;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CB5A1E92F8E8AD700782724 /* Project object */;
 }
