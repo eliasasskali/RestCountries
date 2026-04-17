@@ -4,27 +4,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "Localization",
-    defaultLocalization: "en",
+    name: "DesignSystem",
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Localization",
-            targets: ["Localization"]
+            name: "DesignSystem",
+            targets: ["DesignSystem"]
         ),
+    ],
+    dependencies: [
+        .package(path: "../Localization"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Localization",
-            path: "Sources",
-            resources: [.process("Resources")]
+            name: "DesignSystem",
+            dependencies: ["Localization"],
+            path: "Sources"
         ),
         .testTarget(
-            name: "LocalizationTests",
-            dependencies: ["Localization"]
+            name: "DesignSystemTests",
+            dependencies: ["DesignSystem"]
         ),
     ]
 )

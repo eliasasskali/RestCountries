@@ -7,15 +7,21 @@
 
 import SwiftUI
 
-struct NoContentView: View {
+public struct NoContentView: View {
 
     // MARK: - Dependencies
 
     let message: String
 
+    // MARK: - Initializer
+
+    public init(message: String) {
+        self.message = message
+    }
+
     // MARK: - Body
 
-    var body: some View {
+    public var body: some View {
         if #available(iOS 17.0, *) {
             ContentUnavailableView {
                 Label(message, systemImage: "tray")

@@ -9,14 +9,20 @@ import Localization
 import SwiftUI
 
 /// Shows an error alert when the bound message is non-nil.
-struct ErrorAlertModifier: ViewModifier {
+public struct ErrorAlertModifier: ViewModifier {
     // MARK: - Dependencies
 
     @Binding var message: String?
 
+    // MARK: - Initializer
+
+    public init(message: Binding<String?>) {
+        self._message = message
+    }
+
     // MARK: - Body
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content.alert(
             Localizables.Errors.title,
             isPresented: Binding(

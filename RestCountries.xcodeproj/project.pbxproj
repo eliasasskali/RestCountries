@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9CAE639A2F92120400457679 /* Localization in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB5A2302F8E900000782724 /* Localization */; };
+		9CAE63A02F92130000457679 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 9CAE639F2F92130000457679 /* DesignSystem */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9CB5A1FF2F8E8AD800782724 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -33,6 +38,10 @@
 		9C60F71E2F913D5D00234CF4 /* Exceptions for "RestCountries" folder in "RestCountries" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Common/DesignSystem,
+				Common/Localization,
+				Common/Presentation/Components/ViewModifiers/ErrorAlertModifier.swift,
+				Common/Presentation/Components/Views/NoContentView.swift,
 				Common/Tests/Helpers/JSONLoader.swift,
 				Common/Tests/Helpers/NetworkServiceMock.swift,
 				Common/Tests/Resources/Countries.json,
@@ -123,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CAE639A2F92120400457679 /* Localization in Frameworks */,
+				9CAE63A02F92130000457679 /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +193,7 @@
 			name = RestCountries;
 			packageProductDependencies = (
 				9CB5A2302F8E900000782724 /* Localization */,
+				9CAE639F2F92130000457679 /* DesignSystem */,
 			);
 			productName = RestCountries;
 			productReference = 9CB5A1F12F8E8AD700782724 /* RestCountries.app */;
@@ -259,11 +271,12 @@
 			);
 			mainGroup = 9CB5A1E82F8E8AD700782724;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 9CB5A1F22F8E8AD700782724 /* Products */;
 			packageReferences = (
 				9CB5A22F2F8E900000782724 /* XCLocalSwiftPackageReference "RestCountries/Common/Localization" */,
+				9CAE639E2F92130000457679 /* XCLocalSwiftPackageReference "RestCountries/Common/DesignSystem" */,
 			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9CB5A1F22F8E8AD700782724 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -653,12 +666,20 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RestCountries/Common/Localization;
 		};
+		9CAE639E2F92130000457679 /* XCLocalSwiftPackageReference "RestCountries/Common/DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RestCountries/Common/DesignSystem;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		9CB5A2302F8E900000782724 /* Localization */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Localization;
+		};
+		9CAE639F2F92130000457679 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
