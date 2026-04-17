@@ -1,4 +1,5 @@
 import XCTest
+import NetworkKit
 @testable import RestCountries
 
 final class CountryDetailEndpointTests: XCTestCase {

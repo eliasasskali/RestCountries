@@ -9,16 +9,16 @@ import Foundation
 
 // MARK: - NetworkService
 
-protocol NetworkService: Sendable {
+public protocol NetworkService: Sendable {
     func request<T: Decodable>(endpoint: Endpoint) async throws -> T
 }
 
 // MARK: - NetworkServiceDefault
 
-final class NetworkServiceDefault: NetworkService {
-    nonisolated init() {}
+public final class NetworkServiceDefault: NetworkService {
+    public init() {}
 
-    nonisolated func request<T: Decodable>(endpoint: Endpoint) async throws -> T {
+    public func request<T: Decodable>(endpoint: Endpoint) async throws -> T {
         let urlRequest = try endpoint.asURLRequest()
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard let httpResponse = response as? HTTPURLResponse,

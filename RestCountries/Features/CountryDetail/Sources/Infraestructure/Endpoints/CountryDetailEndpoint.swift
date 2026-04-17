@@ -1,4 +1,5 @@
 import Foundation
+import NetworkKit
 
 struct CountryDetailEndpoint: Endpoint {
 

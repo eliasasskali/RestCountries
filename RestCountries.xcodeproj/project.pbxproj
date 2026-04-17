@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9CAE639A2F92120400457679 /* Localization in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB5A2302F8E900000782724 /* Localization */; };
 		9CAE63A02F92130000457679 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 9CAE639F2F92130000457679 /* DesignSystem */; };
+		9CAE63B02F92140000457679 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CAE63AF2F92140000457679 /* NetworkKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,7 @@
 			membershipExceptions = (
 				Common/DesignSystem,
 				Common/Localization,
-				Common/Presentation/Components/ViewModifiers/ErrorAlertModifier.swift,
-				Common/Presentation/Components/Views/NoContentView.swift,
+				Common/NetworkKit,
 				Common/Tests/Helpers/JSONLoader.swift,
 				Common/Tests/Helpers/NetworkServiceMock.swift,
 				Common/Tests/Resources/Countries.json,
@@ -134,6 +134,7 @@
 			files = (
 				9CAE639A2F92120400457679 /* Localization in Frameworks */,
 				9CAE63A02F92130000457679 /* DesignSystem in Frameworks */,
+				9CAE63B02F92140000457679 /* NetworkKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +195,7 @@
 			packageProductDependencies = (
 				9CB5A2302F8E900000782724 /* Localization */,
 				9CAE639F2F92130000457679 /* DesignSystem */,
+				9CAE63AF2F92140000457679 /* NetworkKit */,
 			);
 			productName = RestCountries;
 			productReference = 9CB5A1F12F8E8AD700782724 /* RestCountries.app */;
@@ -274,6 +276,7 @@
 			packageReferences = (
 				9CB5A22F2F8E900000782724 /* XCLocalSwiftPackageReference "RestCountries/Common/Localization" */,
 				9CAE639E2F92130000457679 /* XCLocalSwiftPackageReference "RestCountries/Common/DesignSystem" */,
+				9CAE63AE2F92140000457679 /* XCLocalSwiftPackageReference "RestCountries/Common/NetworkKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9CB5A1F22F8E8AD700782724 /* Products */;
@@ -662,24 +665,32 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9CB5A22F2F8E900000782724 /* XCLocalSwiftPackageReference "RestCountries/Common/Localization" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = RestCountries/Common/Localization;
-		};
 		9CAE639E2F92130000457679 /* XCLocalSwiftPackageReference "RestCountries/Common/DesignSystem" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RestCountries/Common/DesignSystem;
 		};
+		9CAE63AE2F92140000457679 /* XCLocalSwiftPackageReference "RestCountries/Common/NetworkKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RestCountries/Common/NetworkKit;
+		};
+		9CB5A22F2F8E900000782724 /* XCLocalSwiftPackageReference "RestCountries/Common/Localization" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RestCountries/Common/Localization;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9CB5A2302F8E900000782724 /* Localization */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Localization;
-		};
 		9CAE639F2F92130000457679 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		9CAE63AF2F92140000457679 /* NetworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkKit;
+		};
+		9CB5A2302F8E900000782724 /* Localization */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Localization;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

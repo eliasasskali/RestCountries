@@ -7,26 +7,26 @@
 
 import Foundation
 
-enum CountriesAPI {
-    static let baseURL = "https://restcountries.com/v3.1"
+public enum CountriesAPI {
+    public static let baseURL = "https://restcountries.com/v3.1"
 }
 
 // MARK: - Endpoint
 
-protocol Endpoint: Sendable {
-    nonisolated var baseURL: String { get }
-    nonisolated var path: String { get }
-    nonisolated var queryItems: [URLQueryItem] { get }
+public protocol Endpoint: Sendable {
+    var baseURL: String { get }
+    var path: String { get }
+    var queryItems: [URLQueryItem] { get }
 
-    nonisolated func asURLRequest() throws -> URLRequest
+    func asURLRequest() throws -> URLRequest
 }
 
 // MARK: - Default Implementation
 
-extension Endpoint {
+public extension Endpoint {
     var queryItems: [URLQueryItem] { [] }
 
-    nonisolated func asURLRequest() throws -> URLRequest {
+    func asURLRequest() throws -> URLRequest {
         guard var components = URLComponents(string: baseURL) else {
             throw URLError(.badURL)
         }

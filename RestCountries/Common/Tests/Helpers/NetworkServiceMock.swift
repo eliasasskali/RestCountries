@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetworkKit
 @testable import RestCountries
 
 final class NetworkServiceMock: NetworkService, @unchecked Sendable {
